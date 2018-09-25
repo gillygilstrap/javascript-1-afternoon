@@ -43,13 +43,13 @@ function doubleCheck(arr) {
   for ( var i=0; i<arr.length; i++) {
     if (arr[i] === "chocolate") {
       return arr;
-      } else  {
-        arr.push("chocolate");
-        return arr;
-      }
+      } 
   } 
+  arr.push("chocolate");
   return arr;
 };
+
+
 
 //////////////////PROBLEM 5////////////////////
 
@@ -119,8 +119,8 @@ function add(x,y) {
 //Now invoke math, passing in the numbers 3 and 4, and your add function,
 //storing the result in the variable mathSum.
 
-math(3,4, add());
-
+var mathSum = math(3, 4, add);
+//mathSum();
 
 
 
@@ -164,16 +164,16 @@ function pond() {
 //as strings.
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let globalScope = ["duck"];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let bathroomScope = ["duck", "sailorDuck", "rubberDuck"];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let bathtubScope = ["duck", "sailorDuck", "rubberDuck"];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let pondScope = ["duck", "realDuck"];
 
 //////////////////PROBLEM 10////////////////////
 
@@ -187,7 +187,7 @@ function outerFn() {
 }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
-
+var innerFn = outerFn();
 
 
 //Now invoke innerFn and save the result to a variable called finalResult.
